@@ -1,0 +1,25 @@
+Q: When designing a system that uses voices and faces, separately and together which
+edge cases would you consider? Your answer should reflect both local and global
+aspects (i.e., per single object of the medium, per groups of objects of same and
+different media). Give examples for the various cases in your answer.
+
+A:
+    Local Edge Cases (Per Single Object)
+        1. Data quality: in case there are interferences with the data like noise or the equipment that record
+            is not good enough
+            example: record in crowded place, or in a dark room
+        2. Data format: in case using different formats for the samples can interfere with the processing
+            example: use video with two different resolution
+        3. Continuity of information: in case the sample not containing all the data
+            example: voice sample is breaking up
+        4. Synchronization: the voice and image are not synchronize
+            example: voice is before/after the video
+
+
+    Global Edge Cases (Per Groups of Objects)
+        1. Integration: create model from multiple sources (audio and video)
+            example: need to make sure voice and audio are from the same person
+        2. recording relevance: need to detect small changes between samples and the real data
+            example: if user is hoarse, or if the user has cut the hair
+        3. Scalability: handle lots of datasets and process time needs to be quick
+            example: the recognition can't take too much time if you have millions of datasets
